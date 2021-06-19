@@ -37,7 +37,7 @@ try:
 except:
     ignore_ids = []
 
-del_word = [r"<a?:\w+?:\d+?>",r"<@! \d+>",r"^(.)\1+$",r"https?://[\w!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+",
+del_word = [r"<a?:\w+?:\d+?>",r"<@!\d+>",r"^(.)\1+$",r"https?://[\w!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+",
     r"^!.*",r"^w$",r"^ｗ$",r"ww+",r"ｗｗ+",r"^\s+"]
 
 langlist = list(constant.LANGUAGES.keys())
@@ -141,7 +141,7 @@ async def on_message(message):
         
         await message.channel.send(embed=embed)
     else:
-        send_msg = f'{translated} 〔{display_name}〕'
+        send_msg = f'{translated} `{display_name}`'
         await message.channel.send(send_msg)
 
 client.run(DISCORD_TOKEN)

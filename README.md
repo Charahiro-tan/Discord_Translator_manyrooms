@@ -1,4 +1,5 @@
-# Discord_Translator_manyrooms [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Charahiro-tan/Discord_Translator_manyrooms) [![CodeQL](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/codeql-analysis.yml) [![OSSAR](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/ossar-analysis.yml)
+# Discord_Translator_manyrooms [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Charahiro-tan/Discord_Translator_manyrooms)  
+[![CodeQL](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/codeql-analysis.yml) [![OSSAR](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/ossar-analysis.yml)  
 Discord translation bot that can be deployed on Heroku  
   
 Herokuの無料枠にデプロイできる翻訳Botです。  

@@ -27,7 +27,7 @@
             "required": false
         },
         "GAS_URL":{
-            "description": "When using Google Apps Script translation, use the URL(GASでデプロイした翻訳を使うときはURL)",
+            "description": "When using Google Apps Script translation, use the URL(GASでデプロイした翻訳を使うときはURLを入力)",
             "required": false
         },
         "IGNORE_ID":{

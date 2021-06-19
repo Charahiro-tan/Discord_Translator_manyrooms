@@ -1,4 +1,4 @@
-# Discord_Translator_manyrooms
+# Discord_Translator_manyrooms [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Charahiro-tan/Discord_Translator_manyrooms)
 Discord translation bot that can be deployed on Heroku  
   
 Herokuの無料枠にデプロイできる翻訳Botです。  

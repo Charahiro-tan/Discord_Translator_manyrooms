@@ -2,6 +2,8 @@ import asyncio
 import re
 import os
 
+from discord.message import Message
+
 from async_google_trans_new import AsyncTranslator, constant
 import aiohttp
 import discord
@@ -40,7 +42,7 @@ except:
 del_word = [r"<a?:\w+?:\d+?>",r"<@!\d+>",r"^(.)\1+$",r"https?://[\w!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+",
     r"^!.*",r"^w$",r"^ｗ$",r"ww+",r"ｗｗ+",r"^\s+"]
 
-langlist = list(constant.LANGUAGES.keys())
+langlist = set(constant.LANGUAGES.keys())
 del_word_compiled = [re.compile(w) for w in del_word]
 
 async def gas_translate(msg, lang_tgt, lang_src):
@@ -61,7 +63,7 @@ async def gas_translate(msg, lang_tgt, lang_src):
             return translated_text, gas_use
 
 @client.event
-async def on_message(message):
+async def on_message(message:Message):
     if message.author.bot:
         return
     
@@ -88,8 +90,7 @@ async def on_message(message):
         if split_msg[0].lower() in langlist:
             lang_tgt = split_msg[0]
             msg = ':'.join(split_msg[1:])
-            detect_task = asyncio.create_task(g.detect(msg))
-            lang_src = await detect_task
+            lang_src = await g.detect(msg)
             lang_src = lang_src[0]
         else:
             msg = ':'.join(split_msg[0:])
@@ -97,8 +98,7 @@ async def on_message(message):
         msg = ':'.join(split_msg[0:])
     
     if lang_tgt is None:
-        detect_task = asyncio.create_task(g.detect(msg))
-        lang_src = await detect_task
+        lang_src = await g.detect(msg)
         lang_src = lang_src[0]
         
         if lang_src == HOME_LANG:
@@ -114,8 +114,7 @@ async def on_message(message):
     if GAS_URL:
         translated, gas_use = await gas_translate(msg, lang_tgt, lang_src)
     if not translated:
-        trans_task = asyncio.create_task(g.translate(msg, lang_tgt,lang_src))
-        translated = await trans_task
+        translated = await g.translate(msg, lang_tgt,lang_src)
     
     if not translated:
         return

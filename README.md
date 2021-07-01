@@ -1,4 +1,5 @@
-# Discord_Translator_manyrooms
+# Discord_Translator_manyrooms [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Charahiro-tan/Discord_Translator_manyrooms)  
+[![CodeQL](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/codeql-analysis.yml) [![OSSAR](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/ossar-analysis.yml/badge.svg)](https://github.com/Charahiro-tan/Discord_Translator_manyrooms/actions/workflows/ossar-analysis.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/fa2369238b19dcf4d3d1/maintainability)](https://codeclimate.com/github/Charahiro-tan/Discord_Translator_manyrooms/maintainability)  
 Discord translation bot that can be deployed on Heroku  
   
 Herokuの無料枠にデプロイできる翻訳Botです。  
